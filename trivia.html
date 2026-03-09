@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Challenge</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #eef2f3;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #5b4bc4;
+            transform: translateY(-2px);
+        }
+
+        #score-area {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .score-text { color: #27ae60; }
+        .quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    text-align: center;
+}
+
+.result-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <h1>Trivia Challenge</h1>
+            <p>Answer 3 questions. You get 3 attempts per question!</p>
+        </header>
+
+        <main>
+            <div class="quiz-container">
+    <!-- This is the target for your number/quote logic -->
+    <div id="number-output"></div>
+            <h2 id="user-greeting"></h2>
+           <!--<button onclick="runQuiz()">Start Quiz</button>-->
+            <!-- 1. The display area for the date/time -->
+<h3 id="quiz-timestamp"> Start time 00:00</h3>
+
+            <div id="score-area">
+                Score  <span id="final-score">---</span>
+            </div>
+
+<!-- 2. The button that calls your function -->
+<!-- You can call multiple functions by separating them with a semicolon -->
+<button onclick="displayQuoteLogic(); personalizeGreeting(); validateAndProcessEmail(); getDateTime(); runQuiz();">Start Quiz</button>
+
+<!-- 3. The display area for the final score -->
+<!--<div id="final-score"></div>-->
+
+            
+        </main>
+    </div>
+
+   
+    <script src="trivia.js"></script>
+</body>
+</html>
