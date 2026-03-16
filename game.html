@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Trivia Challenge</title>
+    <style>
+        body { background-color: darkseagreen; background-size: cover; background-repeat: repeat-y; }
+        main { width: 50em; margin: 1em auto; border: outset thick darkgreen; background-color: cornsilk; padding: 1em; font-family: Arial, Helvetica, sans-serif; }
+        #specials { width: 10em; float: right; padding: 0.5em 1em; border: medium darkgreen groove; border-radius: 10px; margin-left: 1em; }
+        #answers { list-style: none; padding: 0; text-align: center; }
+        #answers li { margin-bottom: 0.5em; }
+        .error { color: red; font-weight: bold; }
+        .success { color: darkgreen; font-weight: bold; }
+        a:link, a:visited { color: darkgreen; text-decoration: none; font-weight: bold; border-bottom: 1px dotted darkgreen; cursor: pointer; }
+        legend { font-family: "Comic Sans MS"; color: darkgreen; }
+        h1, h2, h3 { color: darkgreen; font-family: "Comic Sans MS"; text-align: center; line-height: 1.2em; }
+        input[type="submit"], button { background-color: cornsilk; font-size: 1em; border-radius: 5px; border: thin outset darkgreen; cursor: pointer; padding: 0.5em 1em; }
+        #place { text-align: center; margin-top: 1em; }
+        #main { clear: both; padding-top: 1em; }
+        .Spring { background-color: #afeeee; padding: 10px; border-radius: 8px; }
+    </style>
+    <!-- Link to external JavaScript -->
+    <script src="game.js" defer></script>
+</head>
+<body>
+
+<main>
+    <aside id="specials">
+        <h3>Score</h3>
+        <p id="score-display">Correct: 0 / 3</p>
+    </aside>
+
+    <h1>Trivia Game</h1>
+    <div id="game-container" class="Spring">
+        <div id="place">
+            <h2 id="question-text">Ready to test your knowledge?</h2>
+            <button id="start-btn">Start Game</button>
+        </div>
+        
+        <ul id="answers"></ul>
+
+        <div id="feedback" style="text-align: center; min-height: 1.5em;"></div>
+    </div>
+
+    <div id="main">
+        <p id="progress-text" style="text-align: center;"></p>
+    </div>
+</main>
+
+</body>
+</html>
